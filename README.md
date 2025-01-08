@@ -1,20 +1,18 @@
-# Project Name
-
 ## Getting Started
 
-### Prerequisites
+## Prerequisites
 
 To run this project, ensure you have the following installed:
 
-- [Node.js](https://nodejs.org/)
-- [Yarn Package Manager](https://yarnpkg.com/)
-- [Docker](https://www.docker.com/) (optional for Docker setup)
+- **Node.js**
+- **Yarn Package Manager**
+- **Docker** (optional, for Docker setup)
 
----
+## Getting Started
 
 ### 1. Install Dependencies
 
-Before running the project, install the required dependencies:
+Before running the project, you need to install the required dependencies. In your terminal, run:
 
 ```bash
 yarn install
@@ -22,80 +20,83 @@ yarn install
 
 This will install all the dependencies listed in the `package.json` file.
 
----
+### 2. Available Scripts
 
-## Available Scripts
+#### Run Locally
 
-### Run Locally
+##### a) Start the Development Server
 
-#### 1. Start the Development Server
+To start the development server, run the following command:
 
 ```bash
 yarn start
 ```
 
-- Runs the app in development mode.
-- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-- The page will reload automatically when changes are made.
-- Any lint errors will appear in the console.
+This will:
 
-#### 2. Run Tests
+- Run the app in development mode.
+- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Reload the page automatically when changes are made.
+- Show any lint errors in the console.
+
+##### b) Run Tests
+
+To run tests, execute:
 
 ```bash
 yarn test
 ```
 
-- Launches the test runner in interactive watch mode.
-- For more details, see the [React testing documentation](https://reactjs.org/docs/running-tests.html).
+This launches the test runner in interactive watch mode. For more details, see the [React testing documentation](https://reactjs.org/docs/testing.html).
 
-#### 3. Build for Production
+##### c) Build for Production
+
+To build the app for production, run:
 
 ```bash
 yarn build
 ```
 
-- Builds the app for production into the `build` folder.
-- Optimizes the build for best performance (minified, hashed filenames).
+This will:
+
+- Create a production build in the `build` folder.
+- Optimize the build for the best performance (minified, hashed filenames).
 
 To learn more about deploying your app, check out the [React deployment documentation](https://reactjs.org/docs/deployment.html).
 
----
+### 3. Docker Instructions (Optional)
 
-## Docker Instructions
+This project supports Docker for containerized deployment. To build and run the application using Docker, follow these steps:
 
-This project supports Docker for containerized deployment. Follow the steps below to build and run the application using Docker.
+#### a) Build the Docker Image
 
-### Build the Docker Image
-
-Run the following command in the project directory to build the Docker image:
+Ensure your Docker Desktop is running. Then, build the Docker image by running:
 
 ```bash
 docker build -t react-app:dev .
 ```
 
-### Run the Docker Container
+#### b) Run the Docker Container
 
-Run the following command to start the Docker container:
+To start the Docker container, run:
 
 ```bash
 docker run -p 5173:5173 react-app:dev
 ```
 
-- The app will be accessible at [http://localhost:5173](http://localhost:5173).
-
----
+This will make the app accessible at [http://localhost:5173](http://localhost:5173).
 
 ## Troubleshooting
 
-1. **Development Server Fails to Start:**
+- **Development Server Fails to Start**:
 
-   - Ensure your development server is running.
-   - Check the terminal for errors and resolve them.
+  - Ensure your development server is running.
+  - Check the terminal for errors and resolve them.
 
-2. **Docker Image Does Not Build:**
+- **Docker Image Does Not Build**:
 
-   - Verify Docker is installed and running.
-   - Ensure the Dockerfile is correctly configured.
+  - Verify that Docker is installed and running.
+  - Ensure the Dockerfile is correctly configured.
 
-3. **Port Conflicts:**
-   - Make sure no other application is using the specified ports (3000 or 5173).
+- **Port Conflicts**:
+  - Make sure no other application is using the specified ports (3000 or 5173).
