@@ -5,7 +5,7 @@ import { cn } from "../lib/utils";
 
 const navItems = [
   { icon: "Newspaper", label: "feed", id: "feed" },
-  { icon: "BookMarked", label: "favorite authors", id: "authors" },
+  { icon: "Bookmark", label: "favorite authors", id: "authors" },
   { icon: "Hash", label: "favorite categories", id: "categories" },
   { icon: "Globe", label: "favorite sources", id: "sources" },
 ] as const;
@@ -104,7 +104,7 @@ export function Header() {
                 key={id}
                 id={id}
                 label={label}
-                icon={icon} // Pass icon name
+                icon={icon}
                 isActive={activeTab === id}
                 onClick={() => setActiveTab(id)}
               />
